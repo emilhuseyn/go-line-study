@@ -18,9 +18,11 @@ import zipfile
 sys.stdout.reconfigure(encoding="utf-8")
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "build", "replication_package")
-if os.path.exists(OUT):
-    shutil.rmtree(OUT)
+# The folder is also the git working tree of github.com/emilhuseyn/go-line-study (public since 20.11.2026, Emil's
+# word): keep .git and LICENSE, rebuild everything else.
 for d in ("scripts", "plan", "data", "results", "research"):
+    if os.path.exists(os.path.join(OUT, d)):
+        shutil.rmtree(os.path.join(OUT, d))
     os.makedirs(os.path.join(OUT, d))
 for f in sorted(os.listdir(os.path.join(ROOT, "scripts"))):
     if f.endswith(".py") and f != "08_gate.py":  # the manuscript gate is about our own build, not the data
@@ -33,7 +35,9 @@ for f in ("numbers.json", "build_counts.json", "validation.json"):
 for f in ("frame.json", "go_releases.json"):
     shutil.copy2(os.path.join(ROOT, "data", f), os.path.join(OUT, "data", f))
 for f in ("releases.csv", "pairs.csv", "depmax.csv", "depmods.jsonl"):
-    with open(os.path.join(ROOT, "data", f), "rb") as src, gzip.open(os.path.join(OUT, "data", f + ".gz"), "wb", 9) as dst:
+    # mtime=0 and no file name in the header: the same data gives the same bytes, so git sees no false change
+    with open(os.path.join(ROOT, "data", f), "rb") as src, open(os.path.join(OUT, "data", f + ".gz"), "wb") as raw, \
+            gzip.GzipFile(filename="", mode="wb", compresslevel=9, fileobj=raw, mtime=0) as dst:
         shutil.copyfileobj(src, dst)
 
 README = """# The go line in go.mod before and after Go 1.21: replication package
@@ -102,5 +106,6 @@ with zipfile.ZipFile(zp, "w", zipfile.ZIP_DEFLATED) as z:
     for base, _, files in os.walk(OUT):
         for f in sorted(files):
             p = os.path.join(base, f)
-            z.write(p, os.path.relpath(p, OUT))
+            if ".git" not in os.path.relpath(p, OUT).split(os.sep):
+                z.write(p, os.path.relpath(p, OUT))
 print("package:", zp, os.path.getsize(zp) // 1024, "KB")
