@@ -1,0 +1,311 @@
+{
+ "sun2026clash": null,
+ "wang2021hero": {
+  "doi": "10.1109/icse43902.2021.00022",
+  "title": "Hero: On the Chaos When PATH Meets Modules",
+  "authors": [
+   "Ying Wang",
+   "Liang Qiao",
+   "Chang Xu",
+   "Yepang Liu",
+   "Shing-Chi Cheung",
+   "Na Meng",
+   "Hai Yu",
+   "Zhiliang Zhu"
+  ],
+  "venue": "2021 IEEE/ACM 43rd International Conference on Software Engineering (ICSE)",
+  "year": 2021,
+  "volume": null,
+  "issue": null,
+  "pages": "99-111",
+  "type": "proceedings-article"
+ },
+ "li2023semver": {
+  "doi": "10.1109/ase56229.2023.00140",
+  "title": "A Large-Scale Empirical Study on Semantic Versioning in Golang Ecosystem",
+  "authors": [
+   "Wenke Li",
+   "Feng Wu",
+   "Cai Fu",
+   "Fan Zhou"
+  ],
+  "venue": "2023 38th IEEE/ACM International Conference on Automated Software Engineering (ASE)",
+  "year": 2023,
+  "volume": null,
+  "issue": null,
+  "pages": "1604-1614",
+  "type": "proceedings-article"
+ },
+ "hu2024vuln": {
+  "doi": "10.1145/3597503.3639230",
+  "title": "Empirical Analysis of Vulnerabilities Life Cycle in Golang Ecosystem",
+  "authors": [
+   "Jinchang Hu",
+   "Lyuye Zhang",
+   "Chengwei Liu",
+   "Sen Yang",
+   "Song Huang",
+   "Yang Liu"
+  ],
+  "venue": "Proceedings of the IEEE/ACM 46th International Conference on Software Engineering",
+  "year": 2024,
+  "volume": null,
+  "issue": null,
+  "pages": "1-13",
+  "type": "proceedings-article"
+ },
+ "rustunstable": {
+  "doi": "10.1109/tse.2025.3550160",
+  "title": "Demystifying Rust Unstable Features at Ecosystem Scale: Evolution, Propagation, and Mitigation",
+  "authors": [
+   "Chenghao Li",
+   "Yifei Wu",
+   "Wenbo Shen",
+   "Rui Chang",
+   "Chengwei Liu",
+   "Yang Liu"
+  ],
+  "venue": "IEEE Transactions on Software Engineering",
+  "year": 2025,
+  "volume": "51",
+  "issue": "4",
+  "pages": "1284-1302",
+  "type": "journal-article"
+ },
+ "decan2019": {
+  "doi": "10.1007/s10664-017-9589-y",
+  "title": "An empirical comparison of dependency network evolution in seven software packaging ecosystems",
+  "authors": [
+   "Alexandre Decan",
+   "Tom Mens",
+   "Philippe Grosjean"
+  ],
+  "venue": "Empirical Software Engineering",
+  "year": 2018,
+  "volume": "24",
+  "issue": "1",
+  "pages": "381-416",
+  "type": "journal-article"
+ },
+ "kikas2017": {
+  "doi": "10.1109/msr.2017.55",
+  "title": "Structure and Evolution of Package Dependency Networks",
+  "authors": [
+   "Riivo Kikas",
+   "Georgios Gousios",
+   "Marlon Dumas",
+   "Dietmar Pfahl"
+  ],
+  "venue": "2017 IEEE/ACM 14th International Conference on Mining Software Repositories (MSR)",
+  "year": 2017,
+  "volume": null,
+  "issue": null,
+  "pages": "102-112",
+  "type": "proceedings-article"
+ },
+ "bogart2021": {
+  "doi": "10.1145/3447245",
+  "title": "When and How to Make Breaking Changes",
+  "authors": [
+   "Chris Bogart",
+   "Christian Kästner",
+   "James Herbsleb",
+   "Ferdian Thung"
+  ],
+  "venue": "ACM Transactions on Software Engineering and Methodology",
+  "year": 2021,
+  "volume": "30",
+  "issue": "4",
+  "pages": "1-56",
+  "type": "journal-article"
+ },
+ "raemaekers2017": {
+  "doi": "10.1016/j.jss.2016.04.008",
+  "title": "Semantic versioning and impact of breaking changes in the Maven repository",
+  "authors": [
+   "S. Raemaekers",
+   "A. van Deursen",
+   "J. Visser"
+  ],
+  "venue": "Journal of Systems and Software",
+  "year": 2017,
+  "volume": "129",
+  "issue": null,
+  "pages": "140-158",
+  "type": "journal-article"
+ },
+ "dietrich2019": {
+  "doi": "10.1109/msr.2019.00061",
+  "title": "Dependency Versioning in the Wild",
+  "authors": [
+   "Jens Dietrich",
+   "David Pearce",
+   "Jacob Stringer",
+   "Amjed Tahir",
+   "Kelly Blincoe"
+  ],
+  "venue": "2019 IEEE/ACM 16th International Conference on Mining Software Repositories (MSR)",
+  "year": 2019,
+  "volume": null,
+  "issue": null,
+  "pages": "349-359",
+  "type": "proceedings-article"
+ },
+ "dyer2014": {
+  "doi": "10.1145/2568225.2568295",
+  "title": "Mining billions of AST nodes to study actual and potential usage of Java language features",
+  "authors": [
+   "Robert Dyer",
+   "Hridesh Rajan",
+   "Hoan Anh Nguyen",
+   "Tien N. Nguyen"
+  ],
+  "venue": "Proceedings of the 36th International Conference on Software Engineering",
+  "year": 2014,
+  "volume": null,
+  "issue": null,
+  "pages": "779-790",
+  "type": "proceedings-article"
+ },
+ "parnin2011": {
+  "doi": "10.1145/1985441.1985446",
+  "title": "Java generics adoption",
+  "authors": [
+   "Chris Parnin",
+   "Christian Bird",
+   "Emerson Murphy-Hill"
+  ],
+  "venue": "Proceedings of the 8th Working Conference on Mining Software Repositories",
+  "year": 2011,
+  "volume": null,
+  "issue": null,
+  "pages": "3-12",
+  "type": "proceedings-article"
+ },
+ "malloy2017": {
+  "doi": "10.1109/esem.2017.45",
+  "title": "Quantifying the Transition from Python 2 to 3: An Empirical Study of Python Applications",
+  "authors": [
+   "Brian A. Malloy",
+   "James F. Power"
+  ],
+  "venue": "2017 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)",
+  "year": 2017,
+  "volume": null,
+  "issue": null,
+  "pages": "314-323",
+  "type": "proceedings-article"
+ },
+ "zerouali2019lag": {
+  "doi": "10.1002/smr.2157",
+  "title": "A formal framework for measuring technical lag in component repositories — and its application to npm",
+  "authors": [
+   "Ahmed Zerouali",
+   "Tom Mens",
+   "Jesus Gonzalez‐Barahona",
+   "Alexandre Decan",
+   "Eleni Constantinou",
+   "Gregorio Robles"
+  ],
+  "venue": "Journal of Software: Evolution and Process",
+  "year": 2019,
+  "volume": "31",
+  "issue": "8",
+  "pages": null,
+  "type": "journal-article"
+ },
+ "gonzalez2017lag": {
+  "doi": "10.1007/978-3-319-57735-7_17",
+  "title": "Technical Lag in Software Compilations: Measuring How Outdated a Software Deployment Is",
+  "authors": [
+   "Jesus M. Gonzalez-Barahona",
+   "Paul Sherwood",
+   "Gregorio Robles",
+   "Daniel Izquierdo"
+  ],
+  "venue": "IFIP Advances in Information and Communication Technology",
+  "year": 2017,
+  "volume": null,
+  "issue": null,
+  "pages": "182-192",
+  "type": "book-chapter"
+ },
+ "stackage": {
+  "doi": "10.1016/j.cola.2026.101386",
+  "title": "The Stackage repository: An exploratory study of its evolution",
+  "authors": [
+   "Paul Leger",
+   "Felipe Ruiz",
+   "David Moreno-Lumbreras",
+   "Nicolás Sepúlveda",
+   "Ismael Figueroa",
+   "Nicolás Cardozo"
+  ],
+  "venue": "Journal of Computer Languages",
+  "year": 2026,
+  "volume": "86",
+  "issue": null,
+  "pages": "101386",
+  "type": "journal-article"
+ },
+ "cocktails": {
+  "doi": "10.1016/j.cola.2026.101428",
+  "title": "Mining Programming Cocktails from GitHub",
+  "authors": [
+   "João Loureiro",
+   "Alvaro Costa Neto",
+   "Maria João Varanda Pereira",
+   "Pedro Rangel Henriques"
+  ],
+  "venue": "Journal of Computer Languages",
+  "year": 2026,
+  "volume": null,
+  "issue": null,
+  "pages": "101428",
+  "type": "journal-article"
+ },
+ "wittern2016": {
+  "doi": "10.1145/2901739.2901743",
+  "title": "A look at the dynamics of the JavaScript package ecosystem",
+  "authors": [
+   "Erik Wittern",
+   "Philippe Suter",
+   "Shriram Rajagopalan"
+  ],
+  "venue": "Proceedings of the 13th International Conference on Mining Software Repositories",
+  "year": 2016,
+  "volume": null,
+  "issue": null,
+  "pages": "351-361",
+  "type": "proceedings-article"
+ },
+ "decan2021semver": {
+  "doi": "10.1109/tse.2019.2918315",
+  "title": "What Do Package Dependencies Tell Us About Semantic Versioning?",
+  "authors": [
+   "Alexandre Decan",
+   "Tom Mens"
+  ],
+  "venue": "IEEE Transactions on Software Engineering",
+  "year": 2021,
+  "volume": "47",
+  "issue": "6",
+  "pages": "1226-1240",
+  "type": "journal-article"
+ },
+ "lamothe2021": {
+  "doi": "10.1145/3470133",
+  "title": "A Systematic Review of API Evolution Literature",
+  "authors": [
+   "Maxime Lamothe",
+   "Yann-Gaël Guéhéneuc",
+   "Weiyi Shang"
+  ],
+  "venue": "ACM Computing Surveys",
+  "year": 2021,
+  "volume": "54",
+  "issue": "8",
+  "pages": "1-36",
+  "type": "journal-article"
+ }
+}

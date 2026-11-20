@@ -1,0 +1,19 @@
+{
+ "modules_in_frame": 2000,
+ "module_files": 2000,
+ "list_failed": 1,
+ "modules_without_versions": 299,
+ "versions_listed": 79614,
+ "not_semver": 0,
+ "incompatible": 3076,
+ "prerelease": 13308,
+ "info_failed": 270,
+ "mod_failed": 0,
+ "module_line_mismatch": 1682,
+ "go_line_absent": 9650,
+ "go_line_unparseable": 1,
+ "go_line_multiple": 0,
+ "releases": 61278,
+ "modules_with_releases": 1663,
+ "pairs": 59615
+}

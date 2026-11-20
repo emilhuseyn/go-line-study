@@ -1,0 +1,19 @@
+{
+ "agree": 1299,
+ "disagree": 0,
+ "official_error": 1,
+ "examples": [
+  [
+   "github.com/googleapis/gax-go/v2",
+   "v2.5.0",
+   "go: errors parsing go.mod:\ngo.mod:8:2: require google.golang.org/genproto: version \"b98a9ff5e252\" invalid: must be of the form v1.2.3"
+  ]
+ ],
+ "sample": 1300,
+ "corruption_detected": 50,
+ "ordering": {
+  "values": 97,
+  "same_order": true,
+  "go_stderr": ""
+ }
+}
