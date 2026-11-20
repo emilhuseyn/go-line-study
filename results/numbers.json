@@ -576,5 +576,207 @@
     "hi": 0.7614957535984759
    }
   }
+ },
+ "explore": {
+  "inherit_raises_after": 1593,
+  "with_golang_x_setter": 701,
+  "setter_families": {
+   "golang.org/x": 701,
+   "other": 1029,
+   "google.golang.org": 176,
+   "k8s.io": 144
+  },
+  "top_setters": [
+   [
+    "golang.org/x/sys",
+    422
+   ],
+   [
+    "golang.org/x/net",
+    331
+   ],
+   [
+    "golang.org/x/text",
+    310
+   ],
+   [
+    "golang.org/x/crypto",
+    243
+   ],
+   [
+    "golang.org/x/sync",
+    224
+   ],
+   [
+    "go.opentelemetry.io/otel/trace",
+    206
+   ],
+   [
+    "go.opentelemetry.io/otel",
+    206
+   ],
+   [
+    "go.opentelemetry.io/otel/metric",
+    197
+   ],
+   [
+    "golang.org/x/mod",
+    176
+   ],
+   [
+    "github.com/aws/aws-sdk-go-v2",
+    158
+   ],
+   [
+    "golang.org/x/tools",
+    155
+   ],
+   [
+    "google.golang.org/genproto/googleapis/rpc",
+    147
+   ]
+  ],
+  "lag_days": {
+   "known": 1474,
+   "median": 5,
+   "q1": 0,
+   "q3": 24,
+   "within_30": 1192,
+   "within_90": 1367
+  },
+  "inherit_by_year_x": {
+   "2019": {
+    "eligible": 29,
+    "inherit": 14,
+    "inherit_x": 0,
+    "inherit_nox": 14
+   },
+   "2020": {
+    "eligible": 155,
+    "inherit": 83,
+    "inherit_x": 0,
+    "inherit_nox": 83
+   },
+   "2021": {
+    "eligible": 320,
+    "inherit": 126,
+    "inherit_x": 21,
+    "inherit_nox": 105
+   },
+   "2022": {
+    "eligible": 511,
+    "inherit": 248,
+    "inherit_x": 117,
+    "inherit_nox": 131
+   },
+   "2023": {
+    "eligible": 644,
+    "inherit": 327,
+    "inherit_x": 62,
+    "inherit_nox": 265
+   },
+   "2024": {
+    "eligible": 645,
+    "inherit": 401,
+    "inherit_x": 54,
+    "inherit_nox": 347
+   },
+   "2025": {
+    "eligible": 742,
+    "inherit": 543,
+    "inherit_x": 298,
+    "inherit_nox": 245
+   },
+   "2026": {
+    "eligible": 688,
+    "inherit": 502,
+    "inherit_x": 321,
+    "inherit_nox": 181
+   }
+  },
+  "x_history": [
+   [
+    "golang.org/x/sys",
+    "v0.14.0",
+    "2023-11-03",
+    "1.17",
+    "1.18"
+   ],
+   [
+    "golang.org/x/sys",
+    "v0.31.0",
+    "2025-02-14",
+    "1.18",
+    "1.23.0"
+   ],
+   [
+    "golang.org/x/sys",
+    "v0.36.0",
+    "2025-09-05",
+    "1.23.0",
+    "1.24.0"
+   ],
+   [
+    "golang.org/x/sys",
+    "v0.42.0",
+    "2026-03-03",
+    "1.24.0",
+    "1.25.0"
+   ],
+   [
+    "golang.org/x/sys",
+    "v0.48.0",
+    "2026-08-31",
+    "1.25.0",
+    "1.26.0"
+   ],
+   [
+    "golang.org/x/net",
+    "v0.18.0",
+    "2023-11-08",
+    "1.17",
+    "1.18"
+   ],
+   [
+    "golang.org/x/net",
+    "v0.36.0",
+    "2025-03-04",
+    "1.18",
+    "1.23.0"
+   ],
+   [
+    "golang.org/x/net",
+    "v0.44.0",
+    "2025-09-09",
+    "1.23.0",
+    "1.24.0"
+   ],
+   [
+    "golang.org/x/net",
+    "v0.51.0",
+    "2026-02-25",
+    "1.24.0",
+    "1.25.0"
+   ],
+   [
+    "golang.org/x/net",
+    "v0.59.0",
+    "2026-09-08",
+    "1.25.0",
+    "1.26.0"
+   ]
+  ],
+  "x_history_followers_60d": [
+   5,
+   42,
+   35,
+   35,
+   55,
+   0,
+   50,
+   25,
+   47,
+   36
+  ]
  }
 }

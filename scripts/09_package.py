@@ -28,7 +28,7 @@ for f in sorted(os.listdir(os.path.join(ROOT, "scripts"))):
     if f.endswith(".py") and f != "08_gate.py":  # the manuscript gate is about our own build, not the data
         shutil.copy2(os.path.join(ROOT, "scripts", f), os.path.join(OUT, "scripts", f))
 shutil.copy2(os.path.join(ROOT, "plan", "analysis_plan.md"), os.path.join(OUT, "plan"))
-for f in ("references_crossref.json", "references_verified.md"):
+for f in ("references_crossref.json", "references_verified.md", "tidy_demo.txt"):
     shutil.copy2(os.path.join(ROOT, "research", f), os.path.join(OUT, "research", f))
 for f in ("numbers.json", "build_counts.json", "validation.json"):
     shutil.copy2(os.path.join(ROOT, "results", f), os.path.join(OUT, "results", f))
@@ -47,9 +47,12 @@ Go 1.21" (Journal of Computer Languages, submitted).
 
 ## Reproduce the numbers from the shipped data
 
-    gunzip -k data/*.gz          # releases.csv, pairs.csv, depmax.csv, depmods.jsonl
-    python scripts/04_analyse.py # writes results/numbers.json
-    python scripts/06_tables.py  # LaTeX macros and tables (expects a build/ folder next to scripts/)
+    gunzip -k data/*.gz            # releases.csv, pairs.csv, depmax.csv, depmods.jsonl
+    python scripts/04_analyse.py   # planned analyses and the year-by-year shares -> results/numbers.json
+    python scripts/04c_explore.py  # exploratory: who sets inherited lines (adds "explore" to numbers.json)
+    python scripts/06_tables.py    # LaTeX macros and tables (expects a build/ folder next to scripts/)
+    python scripts/06b_figure.py   # Figure 1 (needs matplotlib)
+    python scripts/11_tidy_demo.py # the inheritance rule shown with a Go toolchain (output: research/tidy_demo.txt)
 
 Requires Python 3.11+ and SciPy. `results/numbers.json` in this package was produced this way.
 
@@ -93,8 +96,11 @@ with __import__("tempfile").TemporaryDirectory() as td:
             with gzip.open(os.path.join(pk, "data", f), "rb") as src, open(os.path.join(pk, "data", f[:-3]), "wb") as dst:
                 shutil.copyfileobj(src, dst)
     os.remove(os.path.join(pk, "results", "numbers.json"))
-    r = subprocess.run([sys.executable, os.path.join(pk, "scripts", "04_analyse.py")], capture_output=True, text=True,
-                       env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+    for step in ("04_analyse.py", "04c_explore.py"):
+        r = subprocess.run([sys.executable, os.path.join(pk, "scripts", step)], capture_output=True, text=True,
+                           env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+        if r.returncode:
+            raise SystemExit("STOP: %s failed in the package: %s" % (step, r.stderr[-400:]))
     a = hashlib.sha256(open(os.path.join(pk, "results", "numbers.json"), "rb").read()).hexdigest()
     b = hashlib.sha256(open(os.path.join(ROOT, "results", "numbers.json"), "rb").read()).hexdigest()
     print("regenerated numbers.json identical:", a == b, a[:12], b[:12], r.returncode)

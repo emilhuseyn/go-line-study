@@ -5,9 +5,12 @@ Go 1.21" (Journal of Computer Languages, submitted).
 
 ## Reproduce the numbers from the shipped data
 
-    gunzip -k data/*.gz          # releases.csv, pairs.csv, depmax.csv, depmods.jsonl
-    python scripts/04_analyse.py # writes results/numbers.json
-    python scripts/06_tables.py  # LaTeX macros and tables (expects a build/ folder next to scripts/)
+    gunzip -k data/*.gz            # releases.csv, pairs.csv, depmax.csv, depmods.jsonl
+    python scripts/04_analyse.py   # planned analyses and the year-by-year shares -> results/numbers.json
+    python scripts/04c_explore.py  # exploratory: who sets inherited lines (adds "explore" to numbers.json)
+    python scripts/06_tables.py    # LaTeX macros and tables (expects a build/ folder next to scripts/)
+    python scripts/06b_figure.py   # Figure 1 (needs matplotlib)
+    python scripts/11_tidy_demo.py # the inheritance rule shown with a Go toolchain (output: research/tidy_demo.txt)
 
 Requires Python 3.11+ and SciPy. `results/numbers.json` in this package was produced this way.
 

@@ -1,0 +1,26 @@
+$ go version
+go version go1.27.0 windows/amd64
+
+go.mod before:
+module example.com/check
+
+go 1.22
+
+require golang.org/x/net v0.36.0
+
+$ go mod tidy  (exit 0)
+
+go.mod after:
+module example.com/check
+
+go 1.23.0
+
+require golang.org/x/net v0.36.0
+
+$ go list -m -f '{{.Path}} {{.GoVersion}}' all
+example.com/check 1.23.0
+golang.org/x/crypto 1.23.0
+golang.org/x/net 1.23.0
+golang.org/x/sys 1.18
+golang.org/x/term 1.18
+golang.org/x/text 1.18
